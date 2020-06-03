@@ -1,7 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
@@ -35,6 +35,8 @@ module.exports = {
         }]
     },
     plugins: [
+         //清理舊的檔案
+         new CleanWebpackPlugin(),
         //這個套件是載入 css 檔案
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
@@ -42,10 +44,13 @@ module.exports = {
             filename: "./css/[name].css"
         }),
         new HtmlWebpackPlugin({
+            title: '首頁',
             //來源檔
             template: './src/index.html',
             //產生的檔案
             filename: 'index.html', 
+            minify: false,
+            inject: 'body',
         })
     ]
 };
