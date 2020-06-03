@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -5,12 +6,18 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-    mode: 'development',
-    entry : './src/index.js',//"production" | "development"| "none" 開發模式
+    mode: 'development',//"production" | "development"| "none" 開發模式
+    entry : './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.bundle-[hash].js'
     },
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        index: 'index.html', //看首頁是哪一個檔案
+        port: 9000
+      },// 安裝 npm i webpack-dev-server --save-dev / -g(全域) 指令是 webpack-dev-server --open
     module: {
         rules: [{
             test: /\.(sass|scss|css)$/,
