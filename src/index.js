@@ -1,5 +1,6 @@
-import "./style.css";// css打包方式
-import "./header.css";
+// import "./style.css";// css打包方式
+// import "./header.css";
+import "./sass/style.scss";
 var obj = require ('./cal');
 
 console.log(obj.cal(70));

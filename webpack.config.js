@@ -10,7 +10,7 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.css$/,
+            test: /\.(sass|scss|css)$/,
             use: [{
                 loader: MiniCssExtractPlugin.loader,
                 options: {
@@ -19,11 +19,16 @@ module.exports = {
                     publicPath: './dist'
                 }
                 },
-                    {loader: 'css-loader', //(順序1)
+                {
+                    loader: 'css-loader', //(順序1)
                     options: {
                         modules: true
                     }
-                }]
+                },
+                {
+                    loader: 'sass-loader'
+                }
+                ]
         }]
     },
     plugins: [
