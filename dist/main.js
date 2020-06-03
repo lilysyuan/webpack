@@ -86,14 +86,25 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./cal.js":
+/*!****************!*\
+  !*** ./cal.js ***!
+  \****************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("//計算函式\r\nfunction calculate(n){\r\n    return n * 100 + 'unit'\r\n}\r\n//字串\r\nvar text = 'hi webpack';\r\n\r\nmodule.exports = {\r\n    name : text,\r\n    cal : calculate\r\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jYWwuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jYWwuanM/OTdjYiJdLCJzb3VyY2VzQ29udGVudCI6WyIvL+ioiOeul+WHveW8j1xyXG5mdW5jdGlvbiBjYWxjdWxhdGUobil7XHJcbiAgICByZXR1cm4gbiAqIDEwMCArICd1bml0J1xyXG59XHJcbi8v5a2X5LiyXHJcbnZhciB0ZXh0ID0gJ2hpIHdlYnBhY2snO1xyXG5cclxubW9kdWxlLmV4cG9ydHMgPSB7XHJcbiAgICBuYW1lIDogdGV4dCxcclxuICAgIGNhbCA6IGNhbGN1bGF0ZVxyXG59Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./cal.js\n");
+
+/***/ }),
+
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("console.log('ok');//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9pbmRleC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2luZGV4LmpzPzQxZjUiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc29sZS5sb2coJ29rJyk7Il0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./index.js\n");
+eval("var obj = __webpack_require__ (/*! ./cal */ \"./cal.js\");\r\n\r\nconsole.log(obj.cal(10));\r\nconsole.log(obj.name);\r\n\r\n\r\n//console.log('ok');//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9pbmRleC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2luZGV4LmpzPzQxZjUiXSwic291cmNlc0NvbnRlbnQiOlsidmFyIG9iaiA9IHJlcXVpcmUgKCcuL2NhbCcpO1xyXG5cclxuY29uc29sZS5sb2cob2JqLmNhbCgxMCkpO1xyXG5jb25zb2xlLmxvZyhvYmoubmFtZSk7XHJcblxyXG5cclxuLy9jb25zb2xlLmxvZygnb2snKTsiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./index.js\n");
 
 /***/ })
 
