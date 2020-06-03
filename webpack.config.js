@@ -1,5 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+
 
 module.exports = {
     mode: 'production',
@@ -37,6 +40,12 @@ module.exports = {
             // Options similar to the same options in webpackOptions.output
             // both options are optional
             filename: "./css/[name].css"
+        }),
+        new HtmlWebpackPlugin({
+            //來源檔
+            template: './src/index.html',
+            //產生的檔案
+            filename: 'index.html', 
         })
     ]
 };
