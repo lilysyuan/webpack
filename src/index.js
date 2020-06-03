@@ -1,4 +1,4 @@
-import "./style.css";// css打包方式ㄊ
+import "./style.css";// css打包方式
 import "./header.css";
 var obj = require ('./cal');
 
